@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Место</title>
+    <link rel="stylesheet" href="pages/index.css">
+    <script type="module" src="pages/index.js" defer></script>
+</head>
+
+<body class="body">
+    <div class="page">
+        <header class="header">
+            <img class="logo" src="./images/logo.svg" alt="лого">
+        </header>
+        <main class="content">
+            <section class="profile">
+                <div class="avatar"></div><img class="avatar__pen" src='./images/pen.svg' alt="карандаш">
+                <div class="profile__info">
+                    <h1 class="profile__name"></h1>
+                    <button class="profile__button" type="button"></button>
+                    <p class="profile__whoau"></p>
+                </div>
+                <button class="profile__add-photo" type="button"></button>
+            </section>
+            <section class="cards" id="cards">
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">© 2023 Mesto Russia</p>
+        </footer>
+        <div class="popup popup_edit-profile">
+            <div class="popup__container">
+                <button class="popup__exit popup__exit_editProfile" type="button"></button>
+                <h2 class="popup__header">Редактировать профиль</h2>
+                <form class="popup__form popup__form_edit-profile" name="EditProfile" novalidate>
+                    <input class="popup__input" autocomplete="off" name="nameEditProfile" placeholder="Имя"
+                        id="nameEditProfile" type="text" required minlength="2" maxlength="40">
+                    <div class="popup__error" id="nameEditProfileError"></div>
+                    <input class="popup__input" autocomplete="off" name="aboutEditProfile" placeholder="Хобби"
+                        id="aboutEditProfile" type="text" required minlength="2" maxlength="200">
+                    <div class="popup__error" id="aboutEditProfileError"></div>
+                    <button class="popup__submit-button popup__submit-button_edit-profile"
+                        type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_add-photo">
+            <div class="popup__container">
+                <button class="popup__exit popup__exit_add-photo" type="button"></button>
+                <h2 class="popup__header">Новое место</h2>
+                <form class="popup__form popup__form_add-photo" novalidate>
+                    <input id="namePhoto" class="popup__input popup__input_NameCard" name="nameAddPhoto"
+                        type="text" placeholder="Название" autocomplete="off" required minlength="2"
+                        maxlength="30">
+                    <div id="namePhotoError" class="popup__error"></div> 
+                    <input id="urlPhoto" class="popup__input popup__input_UrlCard" name="linkAddPhoto" type="url"
+                        placeholder="Ссылка на картинку" autocomplete="off" required>
+                    <div id="urlPhotoError" class="popup__error"></div>
+                    <button class="popup__submit-button popup__submit-button_add-photo" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div class="pop-up-image popup">
+            <div class="pop-up-image__container">
+                <img class="popup__exit pop-up-image__closeBtn" src='./images/CloseIcon.svg' alt="кнопка закрытия">
+                <img class="pop-up-image__pic" alt="">
+                <p class="pop-up-image__title"></p>
+            </div>
+        </div>
+        <div class="popup popup_delete-card">
+            <div class="popup__container">
+            <button class="popup__exit popup__exit_delete-card" type="button"></button>
+            <h2 class="popup__header">Вы уверены?</h2>
+            <button class="popup__submit-button popup__submit-button_delete-card" type="submit">Да</button>
+            </div>
+        </div>
+        <div class="popup popup_avatar">
+            <div class="popup__container">
+            <button class="popup__exit popup__exit_delete-card" type="button"></button>
+            <h2 class="popup__header">Обновить аватар</h2>
+            <form class="popup__form popup__form_avatar" novalidate>
+                <input id="avatarURL" name="avatarURL" class="popup__input popup__input_avararURL"
+                    type="url" placeholder="ссылка на картинку" autocomplete="off" required>
+                <div id="avatarUrlError" class="popup__error"></div> 
+                <button class="popup__submit-button popup__submit-button_avatar" type="submit">Сохранить</button>
+            </form>
+            </div>
+        </div>
+
+    </div>
+    <template class="card-template" id="card-template">
+        <div class="card">
+            <img class="card__photo" alt="фотокарточка" id='link'>
+            <img class="card__trash" alt="Мусорка" id='trash' src="./images/Trash.svg">
+            <div class="card__info">
+                <h2 class="card__text" id="name"></h2>
+                <div class="card__likes">
+                    <button class="card__like" type="button"></button>
+                    <div class="card__likeNumbers"></div>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>

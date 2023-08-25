@@ -1,0 +1,43 @@
+.profile__button {
+    margin: 0;
+    padding: 0;
+    border: solid 1px #fff;
+    background-color: rgba(28, 28, 28, 0);
+    background-image: url('../../../images/pencil.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 42%;
+    cursor: pointer;
+}
+
+.profile__button:hover {
+    opacity: .6;
+}
+
+@media screen and (max-width:767px) {
+    .profile__button {
+        height: 5.625vw;
+        width: 5.625vw;
+        position: absolute;
+        top: 1vw;
+        left: 82.5vw;
+        margin-top: 10.3125vw;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1280px) {
+    .profile__button {
+        height: 1.875vw;
+        width: 1.875vw;
+        margin-left: 10px;
+    }
+}
+
+
+@media screen and (min-width:1280px) {
+    .profile__button {
+        margin-left: 18px;
+        height: 24px;
+        width: 24px;
+    }
+}

@@ -1,0 +1,17 @@
+.header {
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        margin-left: 15.625vw;
+        margin-right: 15.625vw;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header {
+        margin-left: calc((100vw - 880px) / 2);
+        margin-right: calc((100vw - 880px) / 2);
+    }
+}

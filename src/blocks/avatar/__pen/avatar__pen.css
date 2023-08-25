@@ -1,0 +1,37 @@
+.avatar__pen {
+    align-self: center;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    visibility: hidden;
+}
+
+.avatar__pen:hover {
+    visibility: visible;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .avatar__pen {
+        width:  7.875vw;
+        height: 7.875vw;
+        left: calc(((100vw - 36.59vw) / 2) + 14.8125vw);
+        top: 27.9375vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1279px) {
+    .avatar__pen {
+        width: 2.5vw;
+        height: 2.5vw;
+        left: 20.6vw;
+        top: 190px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .avatar__pen {
+        left: calc(((100vw - 880px) / 2) + 47px);
+        top: 211px;
+    }
+}

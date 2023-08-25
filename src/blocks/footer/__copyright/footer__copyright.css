@@ -1,0 +1,30 @@
+.footer__copyright {
+    font-weight: 400;
+    text-align: left;
+    display: inline-block;
+    color: #545454;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:767px) {
+    .footer__copyright {
+        font-size: 4.375vw;
+        line-height: 5.3125vw;
+        margin-left: 5.9375vw;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .footer__copyright {
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: 20.1vw;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .footer__copyright {
+        margin-left: calc((100vw - 880px) / 2);
+    }
+}

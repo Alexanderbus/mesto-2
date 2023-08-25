@@ -1,0 +1,22 @@
+.card__photo {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .card__photo {
+        width: 88.125vw;
+        height: 88.125vw;
+        margin-left: 5.9375vw;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .card__photo {
+        width: 282px;
+        height: 282px;
+    }
+}
